@@ -1,10 +1,12 @@
 from django.shortcuts import render
-
+from goods.models import Categories, Products
 
 def catalog(request):
+    goods = Products.objects.all()
+
     cotext = {
         'title':'HOME - catalog',
-        # 'goods': goods,
+        'goods': goods,
     }
 
     return render(request, 'goods/catalog.html', cotext)
