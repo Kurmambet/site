@@ -98,9 +98,11 @@
 
 
                         </div>
-                        <a class="btn btn-dark" href="../orders/create_order.html">
+                        {% if carts %}
+                            <a class="btn btn-dark" href="../orders/create_order.html">
                             Оформить заказ
-                        </a>
+                            </a>
+                        {% endif %}
                     </div>
                 </div>
                 <!-- Оформленные заказы -->
