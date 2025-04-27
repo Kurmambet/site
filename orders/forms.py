@@ -13,7 +13,7 @@ class CreateOrderForm(forms.Form):
             ("1", True),
             ],
         )
-    delivery_address = forms.CharField(required=False)
+    delivery_adress = forms.CharField(required=False)
     payment_on_get = forms.ChoiceField(
         choices=[
             ("0", 'False'),
@@ -71,7 +71,7 @@ class CreateOrderForm(forms.Form):
     #     initial=0,
     # )
 
-    # delivery_address = forms.CharField(
+    # delivery_adress = forms.CharField(
     #     widget=forms.Textarea(
     #         attrs={
     #             "class": "form-control",
