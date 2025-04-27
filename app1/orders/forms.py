@@ -4,9 +4,17 @@ class CreateOrderForm(forms.Form):
     first_name = forms.CharField()
     last_name = forms.CharField()
     phone_number = forms.CharField()
-    requires_delivery = forms.ChoiceField()
-    delivery_adress = forms.ChoiceField(required=False)
-    payment_on_get = forms.ChoiceField()
+    requires_delivery = forms.ChoiceField(
+        choices=[
+            ("0", False),
+            ("1", True),],
+    )
+    delivery_adress = forms.CharField(required=False)
+    payment_on_get = forms.ChoiceField(
+        choices=[
+            ("0", False),
+            ("1", True),],
+        )
 
 
 
@@ -60,10 +68,10 @@ class CreateOrderForm(forms.Form):
     # )
     # payment_on_get = forms.ChoiceField(
     #     widget=forms.RadioSelect(),
-    #     choices=[
-    #         ("0", False),
-    #         ("1", True),
-    #     ],
+        # choices=[
+        #     ("0", False),
+        #     ("1", True),
+        # ],
     #     initial=0
     # )    
 
